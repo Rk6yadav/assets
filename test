@@ -8,3 +8,9 @@ try:
 except IOError:
 	print("Can't write: " +f)
 	
+print('---------------------------------------')
+
+import pathlib
+
+print(pathlib.Path(__file__).parent.resolve())
+print('---------------------------------------')
