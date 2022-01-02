@@ -14,3 +14,43 @@ import pathlib
 
 print(pathlib.Path(__file__).parent.resolve())
 print('---------------------------------------')
+
+
+
+
+import os
+
+#for m in os.walk("/"):
+#    print('m',m)
+file1 = open('py_text.txt','r')
+lines = file1.readlines()
+
+count =0
+for line in lines:
+    count+=1
+    filename = line.replace('./','./New/').replace('\n','')
+    print(filename)
+    if not os.path.exists(os.path.dirname(filename)):
+        try:
+            os.makedirs(os.path.dirname(filename))
+        except OSError as e:
+            print(count,line,'\n',e)
+            continue
+    try:
+        if os.path.isdir(filename):
+            
+            f = open(filename+'/dummy'+str(count)+'.txt','w')
+            f.write(filename+"\n is a directory")
+            f.close()
+        elif os.path.isfile(filename):  
+            f = open(filename,'w')
+            f.write(filename+"\n is a normal file")
+            f.close()
+        else:  
+            f = open(filename,'w')
+            f.write(filename+"\n is a special file")
+            f.close()
+    except Exception as e:
+        print('e: ',e)
+        if count==10:
+            break
