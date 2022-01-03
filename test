@@ -78,7 +78,6 @@ scp -r dev@ip:/home/dev/Odoo13_NEW /home/dev/test
 scp -r dev@ip:/home/dev/Odoo14_home /home/dev/test
 scp -r dev@ip:/home/dev/Odoo15_home /home/dev/test
 scp -r dev@ip:/home/dev/odoo_backend_fb_chat_integration /home/dev/test
-scp -r dev@ip:/home/dev/Odoo_EE_14 /home/dev/test
 scp -r dev@ip:/home/dev/PycharmProjects /home/dev/test
 scp -r dev@ip:/home/dev/Received /home/dev/test
 scp -r dev@ip:/home/dev/snap /home/dev/test
