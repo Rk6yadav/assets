@@ -33,6 +33,7 @@ for line in lines:
     if not os.path.exists(os.path.dirname(filename)):
         try:
             os.makedirs(os.path.dirname(filename))
+	    
         except OSError as e:
             print(count,line,'\n',e)
             continue
@@ -54,3 +55,35 @@ for line in lines:
         print('e: ',e)
         if count==10:
             break
+
+
+
+
+
+
+
+scp -r dev@ip:/home/dev/Desktop /home/dev/test
+scp -r dev@ip:/home/dev/Documents /home/dev/test
+scp -r dev@ip:/home/dev/Downloads /home/dev/test
+scp -r dev@ip:/home/dev/hide_unavailable_variants /home/dev/test
+scp -r dev@ip:/home/dev/material_purchase_requisitions /home/dev/test
+scp -r dev@ip:/home/dev/Music /home/dev/test
+scp -r dev@ip:/home/dev/Odoo11_home /home/dev/test
+scp -r dev@ip:/home/dev/Odoo12_EInvoice /home/dev/test
+scp -r dev@ip:/home/dev/Odoo12_home /home/dev/test
+scp -r dev@ip:/home/dev/Odoo12_home_updated /home/dev/test
+scp -r dev@ip:/home/dev/Odoo13_home /home/dev/test
+scp -r dev@ip:/home/dev/Odoo13_home_old /home/dev/test
+scp -r dev@ip:/home/dev/Odoo13_NEW /home/dev/test
+scp -r dev@ip:/home/dev/Odoo14_home /home/dev/test
+scp -r dev@ip:/home/dev/Odoo15_home /home/dev/test
+scp -r dev@ip:/home/dev/odoo_backend_fb_chat_integration /home/dev/test
+scp -r dev@ip:/home/dev/Odoo_EE_14 /home/dev/test
+scp -r dev@ip:/home/dev/PycharmProjects /home/dev/test
+scp -r dev@ip:/home/dev/Received /home/dev/test
+scp -r dev@ip:/home/dev/snap /home/dev/test
+scp -r dev@ip:/home/dev/TO_MIGRATE /home/dev/test
+scp -r dev@ip:/home/dev/Videos /home/dev/test
+scp -r dev@ip:/home/dev/website_attr_display_type_button /home/dev/test
+scp -r dev@ip:/home/dev/website_product_quotation /home/dev/test
+scp -r dev@ip:/home/dev/web_map-12.0.0.3 /home/dev/test
