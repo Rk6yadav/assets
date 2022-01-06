@@ -86,3 +86,9 @@ scp -r dev@ip:/home/dev/Videos /home/dev/test
 scp -r dev@ip:/home/dev/website_attr_display_type_button /home/dev/test
 scp -r dev@ip:/home/dev/website_product_quotation /home/dev/test
 scp -r dev@ip:/home/dev/web_map-12.0.0.3 /home/dev/test
+
+
+echo $HISTFILE
+/Applications/PhpStorm 2020.1 EAP.app/Contents/plugins/terminal/.zsh_history
+/Users/username/.zsh_history
+export HISTFILE=$HOME/.zsh_history
